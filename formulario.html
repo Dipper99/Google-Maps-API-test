@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header border-bottom p-0">
+            <div class="card-header border-bottom">
+                <h6 class="">Solicitar Servicio</h6>
+            </div>
+            <div class="scroll_text" >
+                <div class="form-row" >
+                    <div class="col-lg-12" >
+                        <img src="iconos/origen.png">
+                        Origen
+                        <a href="#" onclick="Quitarcampo(0);" style="float: right; margin-left: 0px; margin-right: 6px"><i class="fas fa-times-circle"></i></a>
+                        <a href="#" onclick="" style="float: right; margin-left: 5px; margin-right: 5px"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="form-group col-sm-12" style="margin-bottom: 0px;">
+                        <div class="input-group-btn bs-dropdown-to-select-group">
+                            <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select nel_bu" data-toggle="dropdown">
+                                <span class="input-group-addon nel_adow"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                            </button>
+                            <div id="down_1">
+                                <ul class="dropdown-menu" style="font-size: 12px">
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="text" name="0" id="txtPlaces" class="form-control searchaddress col-lg-12 col-sm-12" style="padding-top: 4px; padding-bottom: 4px" placeholder="Direccion">
+                    </div>
+                    <div class="form-group col-sm-12" style="margin-bottom: 0px;">
+                        <input type="text" name="0" class="form-control col-lg-12 col-sm-12" id="TxtReferencia0" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Referencia">
+                    </div>
+                    <div class="form-group col-sm-6" style="margin-bottom: 0px;">
+                        <input type="text" name="0" class="form-control" id="TxtContacto0" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Contacto">
+                    </div>
+                    <div class="form-group col-sm-6" style="margin-bottom: 0px;">
+                        <input type="text" name="0" class="form-control" id="TxtTelefono0" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Telefono">
+                    </div>
+                    <div class="form-group col-sm-6" style="margin-bottom: 0px;">
+                        <input type="text" name="0" class="form-control" id="TxtInstrucciones0" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Instrucciones">
+                    </div>
+                </div>
+                <div class="form-row" style="margin-left: 5px; margin-right: -7px;">
+                    <div class="col-lg-12" style="margin-bottom: 2px; margin-left: 0; padding-left: 0px">
+                        <img src="iconos/destinoMap.png" style="width: 30px; height: 25px; margin-right: 5px; float: left">
+                        Destino 1
+                        <a href="#" onclick="Quitarcampo(1);" style="float: right; margin-left: 0px; margin-right: 6px"><i class="fas fa-times-circle"></i></a>
+                        <a href="#" onclick="" style="float: right; margin-left: 5px; margin-right: 5px"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="form-group col-sm-12" style="margin-bottom: 1px">
+                        <div class="input-group-btn bs-dropdown-to-select-group">
+                            <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select nel_bu" data-toggle="dropdown">
+                                <span class="input-group-addon nel_adow"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                            </button>
+                            <div id="down_2">
+                                <ul class="dropdown-menu" style="font-size: 12px">
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="text" id="txtPlaces1" class="form-control searchaddress" style="padding-top: 4px; padding-bottom: 4px" placeholder="Direccion">
+                    </div>
+                    <div class="form-group col-sm-12" style="margin-bottom: 0px">
+                        <input type="text" name="" class="form-control" id="TxtReferencia1" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Referencia">
+                    </div>
+                    <div class="form-group col-sm-6" style="margin-bottom: 0px">
+                        <input type="text" name="" class="form-control" id="TxtContacto1" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Contacto">
+                    </div>
+                    <div class="form-group col-sm-6" style="margin-bottom: 0px">
+                        <input type="text" name="" class="form-control" id="TxtTelefono1" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Telefono">
+                    </div>
+                    <div class="form-group col-sm-6" style="margin-bottom: 0px">
+                        <input type="text" name="" class="form-control" id="TxtInstrucciones1" value="" style="padding-top: 4px; padding-bottom: 4px" placeholder="Instrucciones">
+                    </div>
+                    <div id="destino1statico" class="form-group col-sm-12 blockdisplay">
+                        <a href="#" onclick="Quitarcampo(1);" style="float: left;"><i class="fas fa-minus-circle"></i></a>
+                        <a href="#" onclick="AgregarCampos();" style="float: right;">Agregar Destino&nbsp;<i class="fas fa-plus-circle"></i></a>
+                    </div>
+                </div>
+                <div id="campos" class="form-row" style="margin-left: 0px; margin-right: 0px;">
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <br style="clear: both">
+                <div class="row flagver" id="panelTipoPago">
+                    <div class="col-sm-12">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                            <i class="fab fa-connectdevelop ng-star-inserted" style="color: black;"></i>Tipo De Pago<span class="fa fa-chevron-down" style="float: right; color: black;"></span></a>
+                                    </h6>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item" data-toggle="modal" data-target="#TipoPago">Agregar otro metodo de pago
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                            <i class="fas fa-tags" style="color: black;"></i>¿Tienes Codigo Promocional? <span class="fa fa-chevron-down" style="float: right; color: black;"></span></a>
+                                    </h6>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item" data-toggle="modal" data-target="#Codigo_Promocional">Ingrese Codigo Promocion
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12">
+                        <button id="linkbutton1" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal" onclick="enviar()" data-controls-modal="#myModal" data-backdrop="static" data-keyboard="false">
+                            Solicitar Xpress | <span id="tx_precio"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-group" style="display: none">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                            <span class="caret"></span>
+                            <span class="input-group-addon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                        </button>
+                        <div id="header">
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Option I</a></li>
+                                <li><a href="#">Option II</a></li>
+                                <li><a href="#">Option III</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Option IV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" id="textaux">
+                    <a href="#" onclick="agregar();">Agregar IEMS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body></html>
